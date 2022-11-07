@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import Inspiration from "../inspirations/Inspiration";
 
-const InspirationContainer = () => {
+function InspirationContainer({quotes, removeQuote, addToFavorites}) {
   return (
-    <div>InspirationContainer</div>
-  )
+    <div className="poems-container">
+      {quotes.map(quote => {
+        return (
+          <Inspiration
+            key={quote.id} 
+            quote={quote} 
+            removeQuote={removeQuote} 
+            addToFavorites={addToFavorites} 
+          />
+        )
+        })}
+    </div>
+  );
 }
 
-export default InspirationContainer
+export default InspirationContainer;
