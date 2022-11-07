@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const inspirationAPI = "http://localhost:9292/inspirations";
 
 
-const Inspiration = () => {
+const Inspiration = ({ quote, removeQuote, addToFavorites }) => {
 
     const {title, body, authors_id} = quote;
     
@@ -16,6 +16,9 @@ const Inspiration = () => {
         });
         removeQuote(quote);
       }
+
+      const authorAPI =`http://localhost:9292//poemauthors/${authors_id}`
+      const edit = `/edit/${quote.id}`
 
 
   return (
