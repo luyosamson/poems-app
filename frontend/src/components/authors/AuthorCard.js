@@ -3,7 +3,6 @@ import AuthorContainer from '../authors/AuthorContainer';
 import NewAuthorForm from '../authors/NewAuthorForm';
 
 const authorAPI = "http://localhost:9292/poemauthors";
-// id, title, content, author
 
 function AuthorCard() {
   const [authors, setAuthors] = useState([]);
