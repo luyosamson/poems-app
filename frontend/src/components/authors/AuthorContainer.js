@@ -19,3 +19,4 @@ function AuthorContainer({authors, removeAuthor, addToFavorites}) {
 }
 
 export default AuthorContainer;
+
