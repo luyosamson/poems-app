@@ -18,28 +18,31 @@ class ApplicationController < Sinatra::Base
   end
 
   #Posting inspiration by an author
-post '/inspirations/:id' do
+  post '/inspirations/:id' do
+
+    inspirations=Inspiration.create(
+      title:params[:title]
+  end
   
-  inspirations=Inspiration.create(
-    title:params[:title]
-    body: params[:body]
-    author_id: params[:author_id]
-
-  )
-inspirations.to_json
-
+  post '/inspirations' do
+  
+    inspirations=Inspiration.create(
+      title:params[:title]
+      category: params[:category]
+      body: params[:body]
+      author_id: params[:author_id]
+    )
+    inspirations.to_json
   end
 
 patch '/inspirations/:id' do
   inspiration=Inspiration.find(params[id])
   inspirations.update(
       title:  params[:title]
+      category: params[:category]
       body: params[:body]
       author_id: params[:author_id]
-
   )
   inspirations.to_json
-
-  end
-
 end
+
