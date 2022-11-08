@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import AuthorContainer from '../authors/AuthorContainer';
-import NewAuthorForm from '../authors/NewAuthorForm';
+import AuthorContainer from './AuthorContainer';
+import NewAuthorForm from './NewAuthorForm';
 
 const authorAPI = "http://localhost:9292/poemauthors";
 
