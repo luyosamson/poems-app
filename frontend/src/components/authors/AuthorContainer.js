@@ -1,5 +1,5 @@
 import React from "react";
-import Author from "../authors/Author";
+import Author from "./Author";
 
 function AuthorContainer({authors, removeAuthor, addToFavorites}) {
   return (
