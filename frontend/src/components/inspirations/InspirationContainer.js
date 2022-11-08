@@ -19,3 +19,4 @@ function InspirationContainer({quotes, removeQuote, addToFavorites}) {
 }
 
 export default InspirationContainer;
+
